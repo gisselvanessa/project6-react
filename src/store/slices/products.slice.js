@@ -10,7 +10,10 @@ const productsSlice=createSlice({
 })
 
 export const{setProducts}=productsSlice.actions
+
 export default productsSlice.reducer
+
+//Thunk
 export const getAllProductsThunk=()=>(dispatch)=>{
     const url='https://e-commerce-api-v2.academlo.tech/api/v1/products'
     axios.get(url)
