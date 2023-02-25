@@ -1,0 +1,37 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 1em;
+    /* align-items: center; */
+    border-bottom: 1px rgb(195, 195, 195) solid;
+}
+.header__title{
+    font-size: 0.7em;
+    color: rgb(255, 101, 101);
+    /* margin: auto 0; */
+    display: flex;
+    justify-content: center;
+}
+.navbar__list{
+    display: flex;
+    /* gap: 1em; */
+    /* padding: 1em; */
+}
+.navbar__options{
+    /* border-left: 1px rgb(195, 195, 195) solid; */
+    height: 100%;
+}
+
+.bx-user,.bx-shopping-bag, .bxs-cart{
+    padding: 1em 5em;
+    border-left: 1px rgb(195, 195, 195) solid;
+    font-size: 1.3em;
+    color: rgb(195, 195, 195);
+}
+
+.bx-user:hover,
+.bx-shopping-bag:hover,
+.bxs-cart:hover {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}

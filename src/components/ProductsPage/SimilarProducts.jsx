@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import CardProduct from '../Home/CardProduct';
-
+import './styles/similarProducts.css'
 const SimilarProducts = ({category, productId}) => {
     
         const [filterProducts, setFilterProducts] = useState()
@@ -17,12 +17,12 @@ const SimilarProducts = ({category, productId}) => {
             }
         
         }, [category,products])
-        console.log(filterProducts);
+        // console.log(filterProducts);
         
         return (
-            <div>
-                <h2>Discover similar products</h2>
-                <div>
+            <div className='similar__products'>
+                <h3 className='sp__title'>Discover similar products</h3>
+                <div className='sp__product'>
                     {
                         filterProducts?.map(prod=>{
 

@@ -1,0 +1,21 @@
+.similar__products{
+    max-width: 1300px;
+    padding: 1.5rem;
+    margin: auto;
+   /* display: flex;
+   flex-direction: column;
+   justify-content: center; */
+}
+.sp__title{
+    margin-bottom: 1em;
+    color: rgb(253, 69, 69);
+}
+.sp__product{
+    
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 3em;
+    height: 400px;
+    /* max-width: 1200px; */
+    /* width: 300px; */
+}
