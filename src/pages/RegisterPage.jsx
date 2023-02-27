@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import defaultValues from "../utils/defaultValues";
 // import { useFormAction } from 'react-router-dom'
+import './styles/register.css'
 
 const RegisterPage = () => {
     

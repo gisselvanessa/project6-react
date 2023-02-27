@@ -23,6 +23,8 @@ function App() {
     dispatch(getCartThunk())
   }, [])
 
+  // const {cart}= useSelector(state=>state)
+  // console.log(cart);
   return (
       <div className="App">
           <Header />

@@ -3,7 +3,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { getCartThunk } from '../../store/slices/cart.slice';
 import config from '../../utils/getConfig';
-
+import './styles/cartItem.css'
 const CartItem = ({prodInfo}) => {
 
     const dispatch=useDispatch()
@@ -19,30 +19,40 @@ const CartItem = ({prodInfo}) => {
             
     }
 
-  return (
-    <article>
-        <header>
-            <img src={prodInfo.product.images[0].url} alt="" />
-        </header>
-        <div>
-            <h4>{prodInfo.product.brand}</h4>
-            <h3>{prodInfo.product.title}</h3>
-            <ul>
-                <li>
-                    <span>Unit price </span>
-                    <span>{prodInfo.product.price}</span>
-                </li>
-                <li>
-                    <span>Quantity </span>
-                    <span>{prodInfo.quantity}</span>
-                </li>
-            </ul>
-        </div>
-        <button onClick={handleDelete}>
-            <i className='bx bx-trash'></i>
-        </button>
-    </article>
-  )
+    return (
+        <article className="cart">
+            <div className="cart__header">
+                <img
+                    className="cart__image"
+                    src={prodInfo.product.images[0].url}
+                    alt=""
+                />
+            </div>
+            <div className="cart__description">
+                <h4 className="cart__brand">{prodInfo.product.brand}</h4>
+                <h3 className="cart__subtitle">{prodInfo.product.title}</h3>
+                <ul className="cart__values">
+                    <li className="cart__info">
+                        <span className="cart__data">Unit price: </span>
+                        <span className="cart__price">
+                            ${prodInfo.product.price}
+                        </span>
+                    </li>
+                    <li className="cart__info">
+                        <span className="cart__data">Quantity: </span>
+                        <span className="cart__quantity">
+                            {prodInfo.quantity}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <button className="cart__btn" onClick={handleDelete}>
+                <i className="bx bx-plus"></i>
+                <i className="bx bx-minus"></i>
+                <i className="bx bx-trash"></i>
+            </button>
+        </article>
+    );
 }
 
 export default CartItem

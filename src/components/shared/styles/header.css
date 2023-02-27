@@ -2,9 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
     padding: 0em 1em;
     /* align-items: center; */
-    border-bottom: 1px rgb(195, 195, 195) solid;
+    border-bottom: 1px rgb(219, 219, 219) solid;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+    
 }
 .header__title{
     font-size: 0.7em;
@@ -25,13 +30,14 @@
 
 .bx-user,.bx-shopping-bag, .bxs-cart{
     padding: 1em 5em;
-    border-left: 1px rgb(195, 195, 195) solid;
-    font-size: 1.3em;
+    border-left: 1px rgb(230, 230, 230) solid;
+    font-size: 1.5em;
     color: rgb(195, 195, 195);
+    transition: all .3s ease-in-out;
 }
 
 .bx-user:hover,
 .bx-shopping-bag:hover,
 .bxs-cart:hover {
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    transform: scale(1.1);
 }

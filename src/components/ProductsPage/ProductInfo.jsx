@@ -13,7 +13,7 @@ const ProductInfo = ({product}) => {
             setCounter(counter - 1);
         }
     }
-    console.log(product);
+    // console.log(product);
     return (
         <article className="product-info-container">
             <img

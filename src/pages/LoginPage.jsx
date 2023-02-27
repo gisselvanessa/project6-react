@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import defaultValues from '../utils/defaultValues';
-
+import './styles/login.css'
 const LoginPage = () => {
 
 const [token, setToken] = useState()
@@ -35,38 +35,67 @@ const [token, setToken] = useState()
 
     if(localStorage.getItem('name')){
         return (
-            <div>
-                
-                <h2>{localStorage.getItem('name')}</h2>
-                <button onClick={handleClick}>Logout</button>
+            <div className="logout">
+                <div className="logout__container">
+                    <i className="bx bxs-user-circle"></i>
+                    <h2 className="logout__title">
+                        {localStorage.getItem("name")}
+                    </h2>
+                    <button className="logout__btn" onClick={handleClick}>
+                        <Link to="/user/login"> Logout</Link>
+                    </button>
+                </div>
             </div>
-        )
+        );
     }
     else{
     return (
-        <div>
-            <form onSubmit={handleSubmit(submit)}>
-                <h2>Form Login</h2>
-                <div>
-                    <h3>Test Data</h3>
-                    <p>vanessa@gmail.com</p>
-                    <p>vane1234</p>
+        <div className="login__container">
+            <div className="login__page">
+                <form className="login__form" onSubmit={handleSubmit(submit)}>
+                    <h3 className="login__form-title">
+                        Welcome! Enter your email and password to continue
+                    </h3>
+                    <div className="login__test">
+                        <h3 className="login__test-title">Test Data</h3>
+                        <p className="login__data">
+                            <i className="bx bx-envelope"></i>
+                            vanessa@gmail.com
+                        </p>
+                        <p className="login__data">
+                            <i className="bx bx-lock-alt"></i>
+                            vane1234
+                        </p>
+                    </div>
+                    <div className="login__form-info">
+                        <label className="login__form-req" htmlFor="email">
+                            Email
+                        </label>
+                        <input
+                            className="login__form-input"
+                            {...register("email")}
+                            type="email"
+                            id="email"
+                        />
+                    </div>
+                    <div className="login__form-info">
+                        <label className="login__form-req" htmlFor="password">
+                            Password
+                        </label>
+                        <input
+                            className="login__form-input"
+                            {...register("password")}
+                            type="password"
+                            id="password"
+                        />
+                    </div>
+                    <button className="login__form-btn">Login</button>
+                </form>
+                <div className='login__form-reg'>
+                    Don't have an account?
+                    <Link to="/user/register"> Sign up</Link>
                 </div>
-                <div>
-                    <label htmlFor="email">Email</label>
-                    <input {...register("email")} type="email" id="email" />
-                </div>
-                <div>
-                    <label htmlFor="password">Password</label>
-                    <input
-                        {...register("password")}
-                        type="password"
-                        id="password"
-                    />
-                </div>
-                <button>Login</button>
-            </form>
-            <Link to="/user/register">Go to register</Link>
+            </div>
         </div>
     );
 }

@@ -31,7 +31,7 @@ const CardProduct = ({product}) => {
     }
     return (
         <article className="product" onClick={handleClick}>
-            <header>
+            <header className='product_header'>
                 <img
                     className="product__img"
                     src={product.images[0].url}

@@ -1,0 +1,68 @@
+/* .cart{
+    width: 300px;
+    background-color: red;
+
+} */
+.cart{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+        background-color: transparent;
+        position: estatic;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        justify-items: center;
+        bottom: 0rem;
+        right: 0.5rem;
+        gap: 0.8rem;
+        /* margin-top: em; */
+    
+}
+.cart__description{
+    background-color: transparent;
+        border-radius: 0;
+        width: 60%;
+        color: gray;
+}
+.cart__header{
+    width: 30%;
+    display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        box-shadow: var(--Shadow);
+        background-color: white;
+        padding: 0.5em;
+}
+.cart__image{
+    width: auto;
+    height: 80px;
+}
+.cart__brand{
+    font-size: 0.8em;
+}
+.cart__subtitle{
+    color: rgb(65, 65, 65);
+    font-size: 1em;
+}
+.cart__data{
+    color: rgb(249, 136, 136);
+}
+.cart__info{
+    font-size: 0.9rem;
+}
+.cart__btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: transparent;
+}
+.bx{
+    font-size: 1.1rem;
+}

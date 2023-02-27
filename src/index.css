@@ -13,6 +13,8 @@ body{
 
 button{
     border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
 a,li{
     text-decoration: none;
