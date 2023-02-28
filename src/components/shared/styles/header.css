@@ -35,6 +35,7 @@
     font-size: 1.5em;
     color: rgb(195, 195, 195);
     transition: all .3s ease-in-out;
+    cursor: pointer;
 }
 
 .bx-user:hover,
