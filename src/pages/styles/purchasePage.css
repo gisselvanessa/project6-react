@@ -1,0 +1,14 @@
+.purchase__page{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    /* padding: 2rem; */
+    padding-top: 5rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        gap: 1.5rem;
+        max-width: 900px;
+        margin: auto;
+}
+.purchases__page-title{
+    margin-bottom: 1rem;
+}

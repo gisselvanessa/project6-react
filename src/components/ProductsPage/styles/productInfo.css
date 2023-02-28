@@ -1,11 +1,14 @@
 .product-info-container{
     padding: 2rem;
+    padding-top: 6rem;
     max-width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
     margin: auto;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
 }
 .product-info {
     width: 100%;

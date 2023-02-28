@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import PurchaseCard from '../components/PurchasesPage/PurchaseCard'
 import config from '../utils/getConfig'
+import './styles/purchasePage.css'
 
 const PurchasesPage = () => {
     const [purchases, setPurchases] = useState()
@@ -16,7 +17,8 @@ const PurchasesPage = () => {
     console.log(purchases);
   return (
     <div>
-        <div>
+        <div className='purchase__page'>
+            <h2 className='purchases__page-title'>My purchases</h2>
             {
                 purchases?.map((purchase)=>(
                     <PurchaseCard

@@ -5,7 +5,7 @@
 } */
 .cart{
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    height: 100vh;
+    /* height: 100vh; */
         background-color: transparent;
         position: estatic;
         padding: 0.5rem;

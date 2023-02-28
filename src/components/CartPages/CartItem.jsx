@@ -46,12 +46,15 @@ const CartItem = ({prodInfo}) => {
                     </li>
                 </ul>
             </div>
-            <button className="cart__btn" onClick={handleDelete}>
+            <button className="cart__btn" >
                 <i className="bx bx-plus"></i>
+            </button>
+            <button className="cart__btn" >
                 <i className="bx bx-minus"></i>
+            </button>
+            <button className="cart__btn" onClick={handleDelete}>
                 <i className="bx bx-trash"></i>
             </button>
-            
         </article>
     );
 }

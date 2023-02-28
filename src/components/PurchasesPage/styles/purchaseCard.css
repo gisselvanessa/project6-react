@@ -1,3 +1,35 @@
 .purchase__img{
     object-fit: contain;
+    /* width: 100%; */
+    height: 100px;
+    /* background-color: blue; */
+    margin: auto;
+}
+.purchase__card{
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+}
+.purchase__info{
+    display: flex;
+    gap: 1rem;
+}
+.purchase__title{
+    
+    font-size: 1rem;
+    align-self: center;
+    margin-left: 1rem;
+}
+.purchase__quantity{
+    text-align: end;
+    align-self: center;
+}
+.purchase__price{
+    text-align: end;
+    align-self: center;
+}
+.purchase__date{
+    text-align: end;
+    align-self: center;
+    color: grey;
+    font-size: 0.8rem;
 }
