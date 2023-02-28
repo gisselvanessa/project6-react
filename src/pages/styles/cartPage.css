@@ -1,37 +1,66 @@
 .cart__container {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+   
+    height: 93.6vh;
     /* height: calc(100vh -50px) */
     width: 40vw;
     /* max-width: 40vw; */
+    /* display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
     gap: 1rem;
-    top: 0px;
-    right: 33%;
+    top: 54px;
+    right: 0px;
     position: fixed;
     background-color: var(--BGcard);
     box-shadow: var(--Shadow);
-    padding: 2rem;
-    padding-top: 5em;
-    transform: translateX(0%);
+    padding: 1rem 1.2rem;
+    /* padding-top: 5em; */
+    transform: translateX(100%);
     transition: 0.5s;
-    z-index: -10;
+    z-index: -100;
     background-color: rgb(255, 255, 255);
-        overflow-y: scroll;
+        overflow-y:scroll;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.cart__box{
+    display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        height: 87vh;
+        gap: 1.5rem;
+        /*
+        padding-bottom: 1rem;
+        margin-bottom: 1rem; */
+        
 }
 .show-cart{
         transform: translateX(0%);
 }
 
+
 .cart__title{
     text-align: center;
+    
     /* margin-bottom: 1em; */
+}
+.cart__footer{
+ display: grid;
+ gap: 1rem;
+padding-bottom: 1.5rem;
+
 }
 .cart__btn-check{
     background-color: rgb(255, 88, 105);
     padding: 1em;
     color: white;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-self: flex-end;
+    width: 100%;
+    /* bottom: 0; */
+    }
+
+    .bx-x{
+        font-size: 1.5rem;
+        cursor: pointer;
+    }

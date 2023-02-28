@@ -6,7 +6,7 @@ import { getCartThunk } from '../store/slices/cart.slice';
 import config from '../utils/getConfig';
 import './styles/cartPage.css'
 
-const CartPage = () => {
+const CartPage = ({handleClose}) => {
     const [totalPrice, setTotalPrice] = useState(0)
 
     const {cart}= useSelector(state=>state)
@@ -32,16 +32,26 @@ const CartPage = () => {
     
     return (
         <div>
-            <div className=" cart__container">
+            <span onClick={handleClose}>
+                <i className="bx bx-x"></i>
+            </span>
+            <div className="cart__box">
                 <h2 className="cart__title">Shopping cart</h2>
                 {cart?.map((prodInfo) => (
                     <CartItem key={prodInfo.id} prodInfo={prodInfo} />
                 ))}
-                <h2>
-                    <span>Total: </span>
-                    <span>{totalPrice}</span>
-                </h2>
-                <button onClick={handlePurchase} className='cart__btn-check'>Buy this cart</button>
+                <div className="cart__footer">
+                    <h2 className="cart__total">
+                        <span>Total: </span>
+                        <span>{totalPrice}</span>
+                    </h2>
+                    <button
+                        onClick={handlePurchase}
+                        className="cart__btn-check"
+                    >
+                        Buy this cart
+                    </button>
+                </div>
             </div>
             {/* <div></div> */}
         </div>

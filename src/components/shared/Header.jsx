@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from 'react-modal';
 import { Link } from 'react-router-dom'
+import CartPage from '../../pages/CartPage';
 import './styles/header.css'
-
+// import CartPage from  'src/pages/CartPage.jsx'
 const Header = () => {
+   
+
+const [open, setOpen] = useState(false);
+const handleOpen = () => {
+    console.log('open');
+    setOpen(true)};
+const handleClose = () => setOpen(false);
+
     return (
         <header className="header">
             <h1 className="">
@@ -22,10 +32,14 @@ const Header = () => {
                             <i className="bx bx-shopping-bag"></i>
                         </Link>
                     </li>
-                    <li className="navbar__options">
-                        <Link className="navbar__opt" to="/cart">
-                            <i className="bx bxs-cart"></i>
-                        </Link>
+                    <li className="navbar__options-cart">
+                        <i onClick={handleOpen} className="bx bxs-cart"></i>
+                        
+                        <div className={`cart__container ${open && "show-cart"}`}>
+                            <CartPage
+                                handleClose={handleClose}
+                            />
+                        </div>
                     </li>
                 </ul>
             </nav>
