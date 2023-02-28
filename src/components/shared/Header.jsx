@@ -18,7 +18,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li className="navbar__options">
-                        <Link className="navbar__opt" to="/">
+                        <Link className="navbar__opt" to="/purchases">
                             <i className="bx bx-shopping-bag"></i>
                         </Link>
                     </li>

@@ -51,6 +51,7 @@ const CartItem = ({prodInfo}) => {
                 <i className="bx bx-minus"></i>
                 <i className="bx bx-trash"></i>
             </button>
+            
         </article>
     );
 }
