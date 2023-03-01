@@ -20,8 +20,8 @@ const handleCategoryAll=()=>{
 
     return (
         <header className="header">
-            <h1 onClick={handleCategoryAll} className="header__title">
-                e-commerce
+            <h1 onClick={handleCategoryAll} >
+                <Link className='navbar__title' to='/'> e-commerce</Link>
             </h1>
             <nav className="navbar">
                 <ul className="navbar__list">
