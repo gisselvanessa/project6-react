@@ -75,3 +75,11 @@
 .home__categories-label:hover{
     color: rgb(255, 96, 96);
 }
+.home__load{
+    color: rgb(215, 215, 215);
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

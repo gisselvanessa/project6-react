@@ -39,7 +39,7 @@ const Home = () => {
                     <i className="bx bx-chevron-down"></i>
                 </header>
                 <ul className='home__categories'>
-                    {/* <li onClick={handleCategoryAll}>All</li> */}
+                    <li className='home__categories-label' onClick={handleCategoryAll}>All</li>
                     {categories?.map((categorie) => (
                         <li className='home__categories-label'
                             onClick={() => handleCategory(categorie.id)}
@@ -65,13 +65,17 @@ const Home = () => {
                 </form>
 
                 <div className="cards">
-                    {products?.length === 0 || products === null ? (
+                    {
+                    products===null? <h1 className='home__load'>Loading...</h1>:(
+                    products?.length === 0 ? (
                         <h1>❌This product does not exist❌</h1>
                     ) : (
                         products?.map((product) => (
                             <CardProduct key={product.id} product={product} />
                         ))
-                    )}
+                    ))
+                }
+                    
                 </div>
             </div>
         </div>
