@@ -1,15 +1,11 @@
 .cart__container {
     position: absolute;
    
-    height: 93.6vh;
+    height: 91.5vh;
     /* height: calc(100vh -50px) */
-    width: 40vw;
-    /* max-width: 40vw; */
-    /* display: flex;
-        flex-direction: column;
-        justify-content: space-between; */
+    width: 34vw;
     gap: 1rem;
-    top: 54px;
+    top: 73px;
     right: 0px;
     position: fixed;
     background-color: var(--BGcard);
@@ -27,7 +23,7 @@
     display: flex;
         flex-direction: column;
         justify-content:space-between;
-        height: 87vh;
+        height: 84.5vh;
         gap: 1.5rem;
         /*
         padding-bottom: 1rem;
@@ -63,4 +59,5 @@ padding-bottom: 1.5rem;
     .bx-x{
         font-size: 1.5rem;
         cursor: pointer;
+        color: rgb(166, 166, 166);
     }

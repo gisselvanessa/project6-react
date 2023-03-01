@@ -11,7 +11,7 @@ const CartPage = ({handleClose}) => {
 
     const {cart}= useSelector(state=>state)
 
-    console.log(cart);
+    // console.log(cart);
     const dispatch = useDispatch()
 
     useEffect(() => {

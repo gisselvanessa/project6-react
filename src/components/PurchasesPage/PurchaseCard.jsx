@@ -17,7 +17,7 @@ const PurchaseCard = ({purchase}) => {
           </div>
           <div className="purchase__quantity">{purchase.quantity}</div>
           <div className="purchase__price">
-              $ {purchase.product.price * purchase.quantity}
+              $ {(purchase.product.price * purchase.quantity).toFixed(2)}
           </div>
       </article>
   );

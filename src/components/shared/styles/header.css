@@ -29,7 +29,7 @@
     height: 100%;
 }
 
-.bx-user,.bx-shopping-bag, .bxs-cart{
+.bx-user,.bx-shopping-bag, .bx-cart-alt{
     padding: 1em 5em;
     border-left: 1px rgb(230, 230, 230) solid;
     font-size: 1.5em;
@@ -40,6 +40,6 @@
 
 .bx-user:hover,
 .bx-shopping-bag:hover,
-.bxs-cart:hover {
+.bx-cart-alt:hover {
     transform: scale(1.1);
 }

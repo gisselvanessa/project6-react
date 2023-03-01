@@ -33,7 +33,7 @@ const handleClose = () => setOpen(false);
                         </Link>
                     </li>
                     <li className="navbar__options-cart">
-                        <i onClick={handleOpen} className="bx bxs-cart"></i>
+                        <i onClick={open?handleClose:handleOpen} className="bx bx-cart-alt"></i>
                         
                         <div className={`cart__container ${open && "show-cart"}`}>
                             <CartPage

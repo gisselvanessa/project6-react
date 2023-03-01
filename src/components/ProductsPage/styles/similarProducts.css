@@ -2,6 +2,7 @@
     max-width: 1300px;
     padding: 1.5rem;
     margin: auto;
+    
    /* display: flex;
    flex-direction: column;
    justify-content: center; */
@@ -18,4 +19,7 @@
     height: 400px;
     /* max-width: 1200px; */
     /* width: 300px; */
+    /* display: flex; */
+        justify-content: center;
+        align-items: center;
 }
