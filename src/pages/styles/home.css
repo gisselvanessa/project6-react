@@ -7,7 +7,7 @@
         display: grid;
         grid-template-columns: 18% 78%;
         gap: 1.5rem;
-        height: 100vh;
+        min-height: 100vh;
 }
 .cards{
     /* display: flex;
