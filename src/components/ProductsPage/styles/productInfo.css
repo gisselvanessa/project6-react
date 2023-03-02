@@ -74,7 +74,7 @@
     border-radius: 50%;
     right: 20px;
     bottom: 20px;
-    background-color: rgb(255, 99, 99);
+    background-color: rgb(255, 87, 87);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +83,7 @@
 .product-info__btn{
     width: 100%;
     height: 3.5em;
-    background-color: rgb(252, 71, 71);
+    background-color: rgb(255, 87, 87);
     color: white;
     display: flex;
     justify-content: center;

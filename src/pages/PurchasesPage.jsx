@@ -14,7 +14,7 @@ const PurchasesPage = () => {
 
     }, [])
     
-    console.log(purchases);
+    // console.log(purchases);
   return (
     <div>
         <div className='purchase__page'>

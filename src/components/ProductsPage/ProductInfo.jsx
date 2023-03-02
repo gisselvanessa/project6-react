@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { getCartThunk } from '../../store/slices/cart.slice'
 import config from '../../utils/getConfig'
+import SliderImgs from './SliderImgs'
 import './styles/productInfo.css'
 const ProductInfo = ({product}) => {
 
@@ -37,11 +38,12 @@ const ProductInfo = ({product}) => {
     // console.log(product);
     return (
         <article className="product-info-container">
-            <img
+            {/* <img
                 className="product-info__img"
                 src={product?.images[0].url}
                 alt=""
-            />
+            /> */}
+            <SliderImgs product={product}/>
             <div className='body'>
                 <h3 className="product-info__brand">{product?.brand}</h3>
                 <h2 className="product-info__title">{product?.title}</h2>

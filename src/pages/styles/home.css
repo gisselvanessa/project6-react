@@ -5,19 +5,22 @@
     margin: auto;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         display: grid;
-        grid-template-columns: 20% 80%;
-        /* gap: 1.5rem; */
+        grid-template-columns: 18% 78%;
+        gap: 1.5rem;
 }
 .cards{
     /* display: flex;
     flex-wrap: wrap; */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     margin: auto;
-    max-width: 1150px;
+    max-width: 1200px;
+    /* height: auto; */
     
     
 }
@@ -54,9 +57,15 @@
     align-items: center;
     
 }
+.home__btn:hover{
+    filter: brightness(1.1);
+}
 .bx-search-alt-2{
     color: white;
     
+}
+.filter__btn:hover{
+    filter: brightness(1.1);
 }
 .side{
     display: flex;
@@ -70,7 +79,7 @@
     margin-top: 1rem;
     margin-left: 1rem;
     font-size: 0.9em;
-    cursor: pointer;
+    cursor: pointer;    
 }
 .home__categories-label:hover{
     color: rgb(255, 96, 96);
@@ -82,4 +91,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.home__error{
+    margin-top: 4rem;
+    text-align: center;
+}
+.filter__btn{
+    background-color: rgb(250, 94, 94);
+        width: 6rem;
+        height: 2rem;
+        display: grid;
+        align-items: center;
+        color: white;
+        justify-self:flex-end ;
+}
+.home__fromto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: center; */
+}
+
+.home__input-fromto{
+    height: 1.5rem;
+    border:1px rgb(199, 199, 199) solid;
+    border-radius: 5px;
+}
+.home__form-fromto {
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 0.9em;
+    cursor: pointer;
+    
+}
+.home__fromto-label{
+    align-self: center;
+}
+.home__cat{
+    margin-bottom: 1em;
 }

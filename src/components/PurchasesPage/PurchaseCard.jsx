@@ -15,7 +15,9 @@ const PurchaseCard = ({purchase}) => {
           <div className="purchase__date">
               {purchase.createdAt.slice(0, 10)}
           </div>
-          <div className="purchase__quantity">{purchase.quantity}</div>
+          <div className="purchase__quantity">
+              <span className='purchase__numb'>{purchase.quantity}</span>
+          </div>
           <div className="purchase__price">
               $ {(purchase.product.price * purchase.quantity).toFixed(2)}
           </div>

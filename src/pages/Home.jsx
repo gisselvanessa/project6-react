@@ -9,7 +9,18 @@ const Home = () => {
     // console.log(products);
     const [inputValue, setInputValue] = useState()
     const [categories, setCategories] = useState()
-    const dispatch=useDispatch()
+
+    //filter
+    const [fromTo, setFromTo] = useState({
+        from:0,
+        to:Infinity
+    })
+    const filterProduct = (prod) =>
+        +prod.price >= fromTo.from && +prod.price <= fromTo.to;
+    
+    
+    
+        const dispatch=useDispatch()
     const handleSubmit=e=>{
         e.preventDefault()
         const input =e.target.inputSearch.value.trim().toLowerCase()
@@ -30,26 +41,81 @@ const Home = () => {
     const handleCategoryAll=()=>{
         dispatch(getAllProductsThunk())
     }
+
+    const handleSubmitPrice=e=>{
+        e.preventDefault()
+        const from=Number(e.target.from.value.trim())
+        const to=Number(e.target.to.value.trim())
+
+        if(from&& to){
+            setFromTo({from,to})
+        }else if (from&& !to) {
+            setFromTo({from,to:Infinity})
+        }
+        else if (!from&& to) {
+            setFromTo({from:0,to})
+        }
+        else{
+            setFromTo({from:0,to:Infinity})
+        }
+    }
     // console.log(inputValue);
     return (
         <div className="home">
-            <div className='home__cat'>
-                <header className='side'>
-                    <h3>Category</h3>
-                    <i className="bx bx-chevron-down"></i>
-                </header>
-                <ul className='home__categories'>
-                    <li className='home__categories-label' onClick={handleCategoryAll}>All</li>
-                    {categories?.map((categorie) => (
-                        <li className='home__categories-label'
-                            onClick={() => handleCategory(categorie.id)}
-                            key={categorie.id}
+            <div>
+                <div className="home__cat">
+                    <header className="side">
+                        <h3>Price</h3>
+                        <i className="bx bx-chevron-down"></i>
+                    </header>
+                    <form
+                        className="home__form-fromto"
+                        onSubmit={handleSubmitPrice}
+                    >
+                        <div className="home__fromto">
+                            <label className='home__fromto-label' htmlFor="from">From</label>
+                            <input
+                                className="home__input-fromto"
+                                type="number"
+                                id="from"
+                            />
+                        </div>
+                        <div className="home__fromto">
+                            <label className='home__fromto-label' htmlFor="to">To</label>
+                            <input
+                                className="home__input-fromto"
+                                type="number"
+                                id="to"
+                            />
+                        </div>
+                        <button className="filter__btn">Filter price</button>
+                    </form>
+                </div>
+                <div className="home__cat">
+                    <header className="side">
+                        <h3>Category</h3>
+                        <i className="bx bx-chevron-down"></i>
+                    </header>
+                    <ul className="home__categories">
+                        <li
+                            className="home__categories-label"
+                            onClick={handleCategoryAll}
                         >
-                            {categorie.name}
+                            All
                         </li>
-                    ))}
-                </ul>
+                        {categories?.map((categorie) => (
+                            <li
+                                className="home__categories-label"
+                                onClick={() => handleCategory(categorie.id)}
+                                key={categorie.id}
+                            >
+                                {categorie.name}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
+
             <div>
                 <form className="home__form" onSubmit={handleSubmit}>
                     <input
@@ -57,7 +123,7 @@ const Home = () => {
                         type="text"
                         name=""
                         id="inputSearch"
-                        placeholder='What are you looking for?'
+                        placeholder="What are you looking for?"
                     />
                     <button className="home__btn">
                         <i className="bx bx-search-alt-2"></i>
@@ -65,17 +131,22 @@ const Home = () => {
                 </form>
 
                 <div className="cards">
-                    {
-                    products===null? <h1 className='home__load'>Loading...</h1>:(
-                    products?.length === 0 ? (
-                        <h1>❌This product does not exist❌</h1>
+                    {products === null ? (
+                        <h1 className="home__load">Loading...</h1>
+                    ) : products?.length === 0 ? (
+                        <h1 className="home__error">
+                            ❌This product does not exist❌
+                        </h1>
                     ) : (
-                        products?.map((product) => (
-                            <CardProduct key={product.id} product={product} />
-                        ))
-                    ))
-                }
-                    
+                        products
+                            ?.filter(filterProduct)
+                            .map((product) => (
+                                <CardProduct
+                                    key={product.id}
+                                    product={product}
+                                />
+                            ))
+                    )}
                 </div>
             </div>
         </div>

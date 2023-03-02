@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
+import Footer from './components/shared/Footer';
 import Header from './components/shared/Header';
 import CartPage from './pages/CartPage';
 import Home from './pages/Home';
@@ -41,6 +42,7 @@ function App() {
                   <Route path="/purchases" element={<PurchasesPage />} />
               </Route>
           </Routes>
+          <Footer/>
       </div>
   );
 }
